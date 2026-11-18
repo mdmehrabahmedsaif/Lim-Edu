@@ -1,0 +1,18 @@
+{
+  "name": "lim-edu",
+  "version": "1.0.0",
+  "description": "Lim Edu - Secure, Lightweight, Restricted Educational Workspace",
+  "main": "launcher/launch.js",
+  "scripts": {
+    "start": "node launcher/launch.js",
+    "shortcut": "powershell -ExecutionPolicy Bypass -File launcher/create-shortcut.ps1"
+  },
+  "keywords": [
+    "education",
+    "kiosk",
+    "restricted-browser",
+    "security"
+  ],
+  "author": "Lim Edu Team",
+  "license": "MIT"
+}

@@ -1,0 +1,49 @@
+/* Lim Edu - YouTube Embed Strict Lockdown */
+
+/* Hide buttons that allow escaping to youtube.com */
+.ytp-youtube-button,
+.ytp-watermark,
+.ytp-share-button,
+.ytp-copylink-button,
+.ytp-pause-overlay,
+.ytp-pause-overlay-container,
+.ytp-endscreen-content,
+.ytp-chrome-top-buttons,
+.ytp-overflow-button,
+.ytp-contextmenu {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  opacity: 0 !important;
+}
+
+/* Disable clicks on video title & channel logo so user cannot open YouTube watch page */
+.ytp-title-link,
+.ytp-title-channel-logo,
+.ytp-title,
+a[href*="youtube.com"],
+a[href*="youtu.be"] {
+  pointer-events: none !important;
+  cursor: default !important;
+  text-decoration: none !important;
+}
+
+/* Ensure controls, play/pause, volume, seekbar, and FULLSCREEN button are crisp and functional */
+.ytp-chrome-bottom {
+  opacity: 1 !important;
+}
+
+.ytp-fullscreen-button {
+  display: inline-block !important;
+  pointer-events: auto !important;
+  cursor: pointer !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.ytp-play-button,
+.ytp-volume-panel,
+.ytp-progress-bar-container,
+.ytp-settings-button {
+  pointer-events: auto !important;
+}

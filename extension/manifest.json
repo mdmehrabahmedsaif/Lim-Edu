@@ -1,0 +1,58 @@
+{
+  "manifest_version": 3,
+  "name": "Lim Edu Security Shield",
+  "version": "1.0.0",
+  "description": "Security shield, strict domain whitelist enforcer, and YouTube containment for Lim Edu",
+  "permissions": [
+    "webNavigation",
+    "tabs",
+    "storage"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://englishboli.com/*",
+        "*://*.englishboli.com/*",
+        "*://mail.google.com/*",
+        "*://keep.google.com/*",
+        "*://accounts.google.com/*",
+        "*://myaccount.google.com/*"
+      ],
+      "js": ["content/bar.js"],
+      "css": ["content/bar.css"],
+      "run_at": "document_idle",
+      "all_frames": false
+    },
+    {
+      "matches": [
+        "*://www.youtube.com/embed/*",
+        "*://www.youtube-nocookie.com/embed/*"
+      ],
+      "js": ["content/youtube.js"],
+      "css": ["content/youtube.css"],
+      "run_at": "document_start",
+      "all_frames": true
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "blocked.html",
+        "blocked.css",
+        "icons/*"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}

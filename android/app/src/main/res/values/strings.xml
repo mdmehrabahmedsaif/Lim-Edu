@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Lim Edu</string>
+    <string name="tab_course">Course</string>
+    <string name="tab_gmail">Gmail</string>
+    <string name="tab_keep">Keep</string>
+    <string name="tab_account">Account</string>
+    <string name="blocked_message">Access Denied: Only approved Lim Edu sites can be opened.</string>
+</resources>

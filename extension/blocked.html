@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Access Restricted - Lim Edu</title>
+  <link rel="stylesheet" href="blocked.css">
+</head>
+<body>
+  <div class="container">
+    <div class="shield-icon">
+      <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/></svg>
+    </div>
+
+    <h1>Access Restricted</h1>
+    <p class="description" id="reason-text">
+      This destination is not on the Lim Edu whitelist. External web browsing and external YouTube pages are disabled to keep your learning environment secure and distraction-free.
+    </p>
+
+    <div class="url-box">
+      <div class="url-label">Blocked URL</div>
+      <div class="url-value" id="blocked-url">---</div>
+    </div>
+
+    <div class="allowed-section">
+      <div class="allowed-title">Return to an Approved Workspace</div>
+      <div class="links-grid">
+        <a href="https://englishboli.com" class="site-card">
+          <span class="site-icon">🎓</span>
+          <span>English Boli Course</span>
+        </a>
+        <a href="https://mail.google.com" class="site-card">
+          <span class="site-icon">✉️</span>
+          <span>Gmail</span>
+        </a>
+        <a href="https://keep.google.com" class="site-card">
+          <span class="site-icon">📝</span>
+          <span>Google Keep</span>
+        </a>
+        <a href="https://accounts.google.com" class="site-card">
+          <span class="site-icon">👤</span>
+          <span>Google Account</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-note">
+      Lim Edu Security Shield &bull; Strict Whitelist Enforced
+    </div>
+  </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const blockedUrl = params.get('url');
+    const reason = params.get('reason');
+
+    if (blockedUrl) {
+      document.getElementById('blocked-url').textContent = blockedUrl;
+    }
+    if (reason) {
+      document.getElementById('reason-text').textContent = reason;
+    }
+  </script>
+</body>
+</html>

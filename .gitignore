@@ -1,0 +1,60 @@
+# Built application files
+*.apk
+*.ap_
+*.aab
+
+# Files for the ART/Dalvik VM
+*.dex
+
+# Java class files
+*.class
+
+# Generated files
+bin/
+gen/
+out/
+build/
+*/build/
+
+# Gradle files
+.gradle/
+*/.gradle/
+buildOutputCleanup/
+
+# Local configuration file (sdk path, etc)
+local.properties
+
+# Proguard fold error when Google Play Services is used
+proguard/
+
+# Log Files
+*.log
+
+# Android Studio Navigation editor temp files
+.navigation/
+
+# Android Studio captures folder
+captures/
+
+# IntelliJ IDEA
+*.iml
+.idea/
+
+# Keystore files
+*.jks
+*.keystore
+
+# External native build folder
+.externalNativeBuild
+.cxx/
+
+# Google Services (in case user has sensitive keys)
+# google-services.json
+
+# Scratch files
+scratch/
+
+# User data and profile cache
+data/
+data/profile/
+
